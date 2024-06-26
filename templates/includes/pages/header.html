@@ -1,3 +1,4 @@
+{%load static%}
 <!doctype html>
 <html lang="en">
     <head>
@@ -16,14 +17,16 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="{%static 'style.css'%}">
+
     </head>
 
     <body>
      
     <!-- header started hadi javadi  -->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light border border-sm border-danger">
-          <div class="container">
+        <nav class="navbar navbar-expand-sm "id="navbar">
+          <div class="container-fluid">
             <a class="navbar-brand" href="#">logo</a>
             <button
               class="navbar-toggler d-lg-none"
@@ -37,7 +40,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-              <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+              <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="#" aria-current="page">Home </a>
                 </li>

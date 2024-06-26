@@ -1,0 +1,19 @@
+{%load static%} {%include 'includes/pages/header.html'%}
+
+<main class="container py-5">
+  <h1 class="text-center text-danger">Create Your Text Post Here</h1>
+  <div class="form-parent d-block mx-auto border border-lg border-danger" style="width:600px;">
+    <form action="" method="post">
+      {%csrf_token%}
+      
+      <p class="form-control">{{form.post}}</p>
+      <div class="d-grid py-2">
+        <button class="btn btn-lg btn-success btn-block" type="submit">
+          Share
+        </button>
+      </div>
+    </form>
+  </div>
+</main>
+
+{%include 'includes/pages/footer.html'%}
