@@ -1,0 +1,27 @@
+{%load static%} {%include 'includes/pages/header.html'%}
+
+<div class="container">
+  <h1 class="text-center text-danger">All Text Posts</h1>
+</div>
+
+
+<!-- showing all the user posts  -->
+<div class="container py-3">
+  {% for d in data%}
+  <p class="fw-bold m-0">{{d.user}}</p>
+  <span class="text-muted">
+    created at : <span class="badge bg-success">{{d.created_at}}</span>
+  </span>
+  <hr>
+  <p>{{d.post}}</p>
+  <div class="reactions">
+    <div class="btn-group">
+        <button class="btn btn-sm m-2 btn-danger" id="like_btn">like</button>
+        <button class="btn btn-sm m-2 btn-warning"id='dislike_btn'>dislike</button>
+        <button class="btn btn-sm m-2 btn-success">comment</button>
+    </div>
+  </div>
+  {%endfor%}
+</div>
+
+{%include 'includes/pages/footer.html'%}

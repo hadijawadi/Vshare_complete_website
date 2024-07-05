@@ -19,3 +19,17 @@ def create_text_post(request):
               return HttpResponse('you have an error')
     
     return render(request, 'post_app/pages/create_text.html',context = {'form':form})
+
+
+from .models import Create_text_post
+
+def show_posts(request):
+       data = Create_text_post.objects.all()
+       context = {
+             'data':data
+       }
+
+
+       return render(request, 'post_app/pages/posts.html',context)
+
+
